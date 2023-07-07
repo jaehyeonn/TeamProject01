@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Enemyprojectile : MonoBehaviour
 {
+
+
     public GameObject bulletPrefab = default;
     public float spawnRateMin = 0.5f;
     public float spawnerRateMax = 3f;
@@ -36,14 +38,14 @@ public class Enemyprojectile : MonoBehaviour
             //spawnRate = Random.Range(spawnRateMin, spawnerRateMax);
         }
     }
-    private void OnTriggerEnter(Collider collision)
-    {
-        //적에게 부딪힌 오브젝트의 태그가 플레이어 이면
-        if (collision.CompareTag("Player"))
-        {
-            PlayerController player = collision.GetComponent<PlayerController>();
-            player.Die();
-        }
+    //private void OnTriggerEnter(Collider collision)
+    //{
+    //    //적에게 부딪힌 오브젝트의 태그가 플레이어 이면
+    //    if (collision.CompareTag("Player"))
+    //    {
+    //        PlayerController player = collision.GetComponent<PlayerController>();
+    //        player.Die();
+    //    }
         
-    }
+    //}
 }

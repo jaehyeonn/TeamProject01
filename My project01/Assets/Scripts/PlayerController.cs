@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,6 +10,15 @@ public class PlayerController : MonoBehaviour
     private Movement movement;
     private Weapon weapon;
 
+    private int score;
+    public int Score
+    {
+        //score 값이 음수가 되지 않도록
+        set => score = Mathf.Max(0, value);
+        get => score;
+    }
+        
+        
     private void Awake()
     {
         movement = GetComponent<Movement>();
