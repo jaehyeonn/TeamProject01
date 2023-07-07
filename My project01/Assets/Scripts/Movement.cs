@@ -18,6 +18,7 @@ public class Movement : MonoBehaviour
     void Update()
     {
         transform.position += moveDirection * moveSpeed * Time.deltaTime;
+
     }
     public void MoveTo(Vector3 direction)
     {

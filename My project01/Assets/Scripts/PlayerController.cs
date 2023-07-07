@@ -40,4 +40,8 @@ public class PlayerController : MonoBehaviour
             weapon.StopFiring();
         }
     }
+    public void Die()
+    {
+        gameObject.SetActive(false);
+    }
 }

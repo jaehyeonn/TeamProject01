@@ -16,10 +16,14 @@ public class EnemySpawner : MonoBehaviour
     
     private IEnumerator SpawnEnemy()
     {
+        GameObject enemy = default;  
         while(true)
         {
-            Instantiate(enemyPrefab, new Vector3(), Quaternion.identity);
+            
+            //적 캐릭터 생성
+            enemy = Instantiate(enemyPrefab, new Vector3(Random.Range(-20, 20),0f,Random.Range(50,40)), enemyPrefab.transform.rotation);
 
+            //spawntime만큼 대기
             yield return new WaitForSeconds(spawnTime);
         }
     }
