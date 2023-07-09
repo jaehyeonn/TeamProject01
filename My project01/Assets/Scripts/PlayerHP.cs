@@ -28,6 +28,8 @@ public class PlayerHP : MonoBehaviour
         //체력이 0이하이면 플레이어 사망
         if (currentHP <= 0)
         {
+            PlayerController player = GetComponent<PlayerController>();
+            player.Die();
             Debug.Log("Player HP : 0..Die");
         }
     }

@@ -30,22 +30,22 @@ public class Enemyprojectile : MonoBehaviour
         if (spawnRate <= timeAfterSpawn)
         {
             timeAfterSpawn = 0;
-            GameObject bullet = Instantiate(
-                bulletPrefab, transform.position, transform.rotation);
+            GameObject bullet = Instantiate
+                (bulletPrefab, transform.position, transform.rotation);
 
 
 
             //spawnRate = Random.Range(spawnRateMin, spawnerRateMax);
         }
     }
-    //private void OnTriggerEnter(Collider collision)
-    //{
-    //    //적에게 부딪힌 오브젝트의 태그가 플레이어 이면
-    //    if (collision.CompareTag("Player"))
-    //    {
-    //        PlayerController player = collision.GetComponent<PlayerController>();
-    //        player.Die();
-    //    }
-        
-    //}
+    private void OnTriggerEnter(Collider collision)
+    {
+        //적에게 부딪힌 오브젝트의 태그가 플레이어 이면
+        //if (collision.CompareTag("Player"))
+        //{
+        //    PlayerController player = collision.GetComponent<PlayerController>();
+        //    player.Die();
+        //}
+
+    }
 }
